@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 4549945117582617888}
   - component: {fileID: 4549945117582617917}
   - component: {fileID: 4549945117582617889}
-  - component: {fileID: 5099293609364194725}
+  - component: {fileID: 2403109999077255745}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Untagged
@@ -347,7 +347,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5099293609364194725
+--- !u!114 &2403109999077255745
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -356,10 +356,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4549945117582617916}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0e945aad7b4d2d47986cedb68688f1b, type: 3}
+  m_Script: {fileID: 11500000, guid: 51ec8cfc9e13a774c9c6d66857c0b83e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 6
   _deathSound: {fileID: 8300000, guid: 3e3e3e5716c2533409755571490cc2c4, type: 3}
   _hitSound: {fileID: 8300000, guid: eeb3bcaf9a1e08b4ca2540b8b4157f6b, type: 3}
   MoveSpeed: 0.05
+  hitDelay: 1

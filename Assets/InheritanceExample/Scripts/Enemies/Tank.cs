@@ -5,12 +5,32 @@ using UnityEngine;
 
 public class Tank : EnemyBase
 {
-    protected override void OnHit()
+	private float defaultMoveSpeed;
+	private float hitTime;
+
+	[Header("Tank Attributes")]
+	[SerializeField] private float hitDelay = 1f;
+
+	private void Start()
+	{
+		defaultMoveSpeed = MoveSpeed;
+	}
+
+	protected override void OnHit()
     {
-        
+		hitTime = Time.unscaledTime;
+		MoveSpeed = 0;
     }
 
-    public override void Kill()
+	protected override void Move()
+	{
+		if (Time.unscaledTime >= hitTime + hitDelay)
+			MoveSpeed = defaultMoveSpeed;
+
+		base.Move();
+	}
+
+	public override void Kill()
     {
         //TODO put code you want to happen before disable here
 
