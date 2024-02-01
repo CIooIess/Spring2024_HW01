@@ -13,17 +13,20 @@ public class Tank : EnemyBase
 
 	private void Start()
 	{
+		//record default movespeed when spawned
 		defaultMoveSpeed = MoveSpeed;
 	}
 
 	protected override void OnHit()
     {
+		//timestamp hit time and set movespeed to 0
 		hitTime = Time.unscaledTime;
 		MoveSpeed = 0;
     }
 
 	protected override void Move()
 	{
+		//check if time has elapsed stun delay since hit, return movespeed to default
 		if (Time.unscaledTime >= hitTime + hitDelay)
 			MoveSpeed = defaultMoveSpeed;
 

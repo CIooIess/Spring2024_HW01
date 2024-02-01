@@ -15,6 +15,7 @@ public class Charger : EnemyBase
 
     public override void Kill()
     {
+		//spawn powerup when killed
 		Instantiate(powerUpDrop, transform.position, Quaternion.identity);
 
         // this runs the base method AND what's above it here

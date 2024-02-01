@@ -48,6 +48,6 @@ public abstract class EnemyBase : MonoBehaviour
     public virtual void Kill()
     {
         AudioHelper.PlayClip2D(_deathSound, 1, .1f);
-        gameObject.SetActive(false);
+		Destroy(gameObject);
     }
 }
