@@ -4,6 +4,8 @@ using UnityEngine;
 
 public abstract class PowerUpBase : MonoBehaviour
 {
+	protected TurretController turret;
+
 	[SerializeField] protected float PowerupDuration = 1f;
 	private float hitTime;
 	private bool powerUp;
@@ -13,6 +15,11 @@ public abstract class PowerUpBase : MonoBehaviour
 
 	protected abstract void PowerUp();
 	protected abstract void PowerDown();
+
+	protected void Awake()
+	{
+		turret = FindObjectOfType<TurretController>();
+	}
 
 	private void OnTriggerEnter(Collider other)
 	{
