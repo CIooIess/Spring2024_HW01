@@ -7,7 +7,8 @@ public class Charger : EnemyBase
 {
     protected override void OnHit()
     {
-        
+		//increase speed when hit
+		MoveSpeed *= 2;
     }
 
     public override void Kill()
